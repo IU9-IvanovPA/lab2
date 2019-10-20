@@ -1,14 +1,6 @@
 package funkpaws.hadoop.lab2;
 
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
-import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-
-import javax.xml.crypto.Data;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -31,6 +23,8 @@ public class FlightEntry implements Writable {
 
     public int getAirportId() {
         return airportId;
+    }
+    public FlightEntry() {
     }
 
     public FlightEntry(String string) {
@@ -63,9 +57,4 @@ public class FlightEntry implements Writable {
     public String toString() {
         return airportId + "," + delay + "," + canceled;
     }
-}
-
-
-
-
 }
